@@ -857,8 +857,8 @@ export class OpenSeaPort {
         recipientAddress?: string;
         referrerAddress?: string; }
     ): Promise<string> {
-    console.log(order);
-    return
+    this.logger('Order')
+    this.logger(JSON.stringify(order))
     const matchingOrder = this._makeMatchingOrder({
       order,
       accountAddress,
@@ -2278,8 +2278,6 @@ export class OpenSeaPort {
         throw new Error('Invalid order metadata')
       }
     }
-
-    console.debug("You are HERE!);
 
     const { target, calldata, replacementPattern } = computeOrderParams()
     const times = this._getTimeParameters(0)
