@@ -2277,6 +2277,8 @@ export class OpenSeaPort {
       }
     }
 
+    console.debug("You are HERE!);
+
     const { target, calldata, replacementPattern } = computeOrderParams()
     const times = this._getTimeParameters(0)
     // Compat for matching buy orders that have fee recipient still on them
