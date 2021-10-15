@@ -857,6 +857,8 @@ export class OpenSeaPort {
         recipientAddress?: string;
         referrerAddress?: string; }
     ): Promise<string> {
+    console.log(order);
+    return
     const matchingOrder = this._makeMatchingOrder({
       order,
       accountAddress,
